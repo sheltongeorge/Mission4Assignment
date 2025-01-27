@@ -1,33 +1,24 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.VisualBasic;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Xml.Linq;
-using System.Reflection;
 
 namespace Mission4Assignment
 {
     internal class TikTak
     {
-        //2) The supporting class (with whichever name you choose) will:
-        //• Receive the “board” array from the driver class
-        //• Contain a method that prints the board based on the information passed to it
-        //• Contain a method that receives the game board array as input and returns if there is a
-        //winner and who it was
-
-
-        public void GameBoard(string[] board)
+        // Print the game board
+        public static void GameBoard(List<char> board)
         {
-            Console.WriteLine(board[0] + " " + board[1] + " " + board[2]);
-            Console.WriteLine(board[3] + " " + board[4] + " " + board[5]);
-            Console.WriteLine(board[6] + " " + board[7] + " " + board[8]);
+            Console.WriteLine();
+            Console.WriteLine($" {board[0]} | {board[1]} | {board[2]} ");
+            Console.WriteLine("---|---|---");
+            Console.WriteLine($" {board[3]} | {board[4]} | {board[5]} ");
+            Console.WriteLine("---|---|---");
+            Console.WriteLine($" {board[6]} | {board[7]} | {board[8]} ");
+            Console.WriteLine();
         }
 
-        public static bool CheckWinner(string[] board, out string winner)
+        // Check if there is a winner
+        public static bool CheckWinner(List<char> board, out char winner)
         {
             // Horizontal check
             for (int i = 0; i < 9; i += 3)
@@ -49,7 +40,7 @@ namespace Mission4Assignment
                 }
             }
 
-            // Diagnols check
+            // Diagonal checks
             if (board[0] == board[4] && board[4] == board[8])
             {
                 winner = board[0];
@@ -62,7 +53,7 @@ namespace Mission4Assignment
                 return true;
             }
 
-            winner = " ";
+            winner = ' ';
             return false;
         }
     }
