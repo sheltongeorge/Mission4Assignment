@@ -3,7 +3,7 @@
     private static void Main(string[] args)
     {
         bool winner = false;
-        List<int> numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+        List<char> numbers = new List<char> {'1','2','3','4','5','6','7','8','9'};
 
 
         Console.WriteLine("Welcome to the Tic Tac Toe game! ");
