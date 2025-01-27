@@ -42,9 +42,6 @@
 
                 return choice; // Return the valid choice
             }
-
-
-           
             // Update GameBoard
 
             // Check for a winner
