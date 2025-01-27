@@ -4,7 +4,7 @@
     {
         string choice = "";
         bool winner = false;
-        List<char> numbers = new List<char> {'1','2','3','4','5','6','7','8','9'};
+        List<char> board = new List<char> {'1','2','3','4','5','6','7','8','9'};
 
 
         Console.WriteLine("Welcome to the Tic Tac Toe game! ");
@@ -12,7 +12,7 @@
         do // grid[5]
         {
             // Print the game board
-            SupportingClass.printboard(numbers);
+            SupportingClass.printboard(board);
 
             // Determine Current Player
             int currentPLayer = 1;
@@ -44,8 +44,12 @@
             }
 
 
-           
+
             // Update GameBoard
+
+   
+            int choiceNumeric = int.Parse(choice);
+            board[choiceNumeric - 1] = (currentPLayer % 2 == 0 ? 'O' : 'X');
 
             // Check for a winner
 
@@ -55,7 +59,7 @@
 
             // Code block to be executed
 
-            
+
         } while (!winner);
     }
 
