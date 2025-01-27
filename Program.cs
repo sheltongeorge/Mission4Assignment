@@ -10,6 +10,19 @@
 
         do // grid[5]
         {
+            // Print the game board
+
+            // Determine Current Player
+
+            // Validate the Input
+
+            // Update GameBoard
+
+            // Check for a winner
+
+            // Check for a draw
+
+            // Alternate Players
 
             // Code block to be executed
         } while (!winner);
