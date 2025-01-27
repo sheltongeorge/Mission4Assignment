@@ -1,4 +1,6 @@
-﻿internal class Program
+﻿using Mission4Assignment;
+
+internal class Program
 {
     private static void Main(string[] args)
     {
@@ -12,7 +14,7 @@
         do // grid[5]
         {
             // Print the game board
-            SupportingClass.printboard(board);
+            TikTak.GameBoard(board);
 
             // Determine Current Player
             int currentPLayer = 1;
