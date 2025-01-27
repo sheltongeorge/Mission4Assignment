@@ -51,6 +51,7 @@
             int choiceNumeric = int.Parse(choice);
             board[choiceNumeric - 1] = (currentPLayer % 2 == 0 ? 'O' : 'X');
 
+
             // Check for a winner
 
             // Check for a draw
