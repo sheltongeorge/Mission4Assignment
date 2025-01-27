@@ -20,14 +20,14 @@ namespace Mission4Assignment
         //winner and who it was
 
 
-        public void GameBoard(string[] board)
+        public void GameBoard(char[] board)
         {
             Console.WriteLine(board[0] + " " + board[1] + " " + board[2]);
             Console.WriteLine(board[3] + " " + board[4] + " " + board[5]);
             Console.WriteLine(board[6] + " " + board[7] + " " + board[8]);
         }
 
-        public static bool CheckWinner(string[] board, out string winner)
+        public static bool CheckWinner(char[] board, out char winner)
         {
             // Horizontal check
             for (int i = 0; i < 9; i++)
@@ -63,7 +63,7 @@ namespace Mission4Assignment
                 return true;
             }
 
-            winner = " ";
+            winner = "_";
             return false;
         }
     }

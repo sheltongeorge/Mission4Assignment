@@ -5,8 +5,9 @@ internal class Program
     private static void Main(string[] args)
     {
         string choice = "";
-        bool winner = false;
-        List<char> board = new List<char> {'1','2','3','4','5','6','7','8','9'};
+        bool gameWon = false;
+        char[] board = { '1', '2', '3', '4', '5', '6', '7', '8', '9' };
+
 
 
         Console.WriteLine("Welcome to the Tic Tac Toe game! ");
@@ -55,7 +56,14 @@ internal class Program
 
 
             // Check for a winner
-
+            if (TikTak.CheckWinner(board, out string winner))
+            {
+                Console.Clear();
+                TikTak.GameBoard(board);
+                Console.WriteLine($"Player {winner} wins!");
+                gameWon = true;
+                
+            }
             // Check for a draw
 
             // Alternate Players
@@ -63,7 +71,7 @@ internal class Program
             // Code block to be executed
 
 
-        } while (!winner);
+        } while (!gameWon);
     }
 
     
