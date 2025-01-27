@@ -30,20 +30,19 @@ namespace Mission4Assignment
         public static bool CheckWinner(char[] board, out char winner)
         {
             // Horizontal check
-            for (int i = 0; i < 9; i++)
+            for (int i = 0; i < 9; i += 3)
             {
                 if (board[i] == board[i + 1] && board[i + 1] == board[i + 2])
                 {
                     winner = board[i];
                     return true;
                 }
-
-                i += 3;
             }
+
             // Vertical check
             for (int i = 0; i < 3; i++)
             {
-                if (board[0 + i] == board[3 + i] && board[0 + i] == board[6 + i ])
+                if (board[i] == board[i + 3] && board[i] == board[i + 6])
                 {
                     winner = board[i];
                     return true;
