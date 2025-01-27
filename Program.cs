@@ -11,10 +11,35 @@
         do // grid[5]
         {
             // Print the game board
+            SupportingClass.printboard(numbers);
 
             // Determine Current Player
 
             // Validate the Input
+
+            string ValidateInput(List<string> board)
+            {
+                bool validInput = false;
+
+                do
+                {
+                    choice = Console.ReadLine();
+
+                    // Check if the input is a valid number in the board
+                    if (board.Contains(choice))
+                    {
+                        validInput = true; // Input is valid if the position is still available
+                    }
+                    else
+                    {
+                        Console.WriteLine("Invalid input! Please choose an available number.");
+                    }
+
+                } while (!validInput);
+
+                return choice; // Return the valid choice
+            }
+
 
             // Update GameBoard
 
